@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical & Horizontal Alignments</title>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .row{
+            background-color:#FFE5E5 ;
+            /* margin-bottom: .5rem; */
+            /* padding: 50px 40px; */
+            height: fit-content;
+        }
+        .col{
+            border: 1px solid rgb(189, 186, 186);
+            text-align: center;
+            /* padding: 5px 10px; */
+            background-color: aliceblue;
+            margin-bottom: .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Vertical Alignment</h3>
+    <br>
+   <h3>For align All Items in Vertical</h3>
+   <h4>align-items-center,start,end</h4>
+    <br>
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+      </div>
+    <br>
+    <br>
+    <h3>Align Each items by Self vertically</h3>
+    <h4>align-self-center,start,end</h4>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+          <div class="col align-self-center">
+            One of three columns
+          </div>
+          <div class="col align-self-start">
+            One of three columns
+          </div>
+          <div class="col align-self-end">
+            One of three columns
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3>Horizontal Alignment</h3>
+      <br>
+      <mark>Properties are :</mark>
+      <table>
+        <tr>
+            <th>justify-content-around</th>
+            <th>justify-content-between</th>
+            <th>justify-content-center</th>
+            <th>justify-content-end</th>
+            <th>justify-content-evenly</th>
+            <th>justify-content-start</th>
+          </tr>
+      </table>
+      <br>
+      <div class="container">
+        <div class="row justify-content-start">
+          <div class="col col-5">
+            One of two columns
+          </div>
+          <div class="col col-5">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col col-4">
+            One of two columns
+          </div>
+          <div class="col col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col col-4">
+            One of two columns
+          </div>
+          <div class="col col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col col-4">
+            One of two columns
+          </div>
+          <div class="col col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col col-4">
+            One of two columns
+          </div>
+          <div class="col col-4">
+            One of two columns
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col col-4">
+            One of two columns
+          </div>
+          <div class="col col-4">
+            One of two columns
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <h3>Column wrapping</h3>
+      <h5>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</h5>
+      <div class="container">
+        <div class="row">
+          <div class="col col-9">.col-9</div>
+          <div class="col col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+          <div class="col col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3>Column breaks</h3>
+      <h6>Breaking columns to a new line in flexbox requires a small hack: add an element with <span style="color: red;">width: 100%</span> wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple <span style="color:red;"> .rows</span>, but not every implementation method can account for this.</h6>
+      <br>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col col-6 col-sm-3">.col-6 .col-sm-3</div>
+          <div class="col col-6 col-sm-3">.col-6 .col-sm-3</div>
+      
+          <!-- Force next columns to break to new line -->
+          <div class="w-100"></div>
+      
+          <div class="col col-6 col-sm-3">.col-6 .col-sm-3</div>
+          <div class="col col-6 col-sm-3">.col-6 .col-sm-3</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col col-6 col-sm-4">.col-6 .col-sm-4</div>
+          <div class="col col-6 col-sm-4">.col-6 .col-sm-4</div>
+      
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <div class="w-100 d-none d-md-block"></div>
+      
+          <div class="col col-6 col-sm-4">.col-6 .col-sm-4</div>
+          <div class="col col-6 col-sm-4">.col-6 .col-sm-4</div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3>Ordernig or Reordering</h3>
+      <h6>Use <span style="color:red;">.order-</span> classes for controlling the <b>visual order</b> of your content. These classes are responsive, so you can set the <span style="color:red;">order</span> by breakpoint (e.g.,<span style="color:red;">.order-1.order-md-2</span> ). Includes support for <span style="color:red;">1</span> through <span style="color:red;">5</span> across all six grid tiers.</h6>
+      <div class="container">
+        <div class="row">
+            <div class="col order-4">
+                This is First with order 4
+            </div>
+            <div class="col order-1">
+                This is Second with order 1
+            </div>
+            <div class="col order-2">
+                This is Third with order 2
+            </div>
+            <div class="col order-3">
+                This is Fourth with order 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col order-last">
+              This is first with ordered last
+            </div>
+            <div class="col">
+              This is second with unordered
+            </div>
+            <div class="col order-first">
+              This is Third with  ordered first
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <h3>Offsetting Columns</h3>
+      <h6>You can offset grid columns in two ways: our responsive<span style="color: red;">.offset-</span> grid classes and our margin utilities. Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.</h6>
+      <br>
+      <h4>Offset Classes</h4>
+      <h6>Move columns to the right using <span style="color: red;">.offset-md-*</span> classes. These classes increase the left margin of a column by<span style="color: red;"> *</span> columns. For example,<span style="color: red;"> .offset-md-4</span> moves <span style="color: red;">.col-md-4</span> over four columns.</h6>
+      <div class="container">
+        <div class="row">
+          <div class="col col-md-4">.col-md-4</div>
+          <div class="col col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+          <div class="col col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row">
+          <div class="col col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+            <div class="col col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+          </div>
+          <div class="row">
+            <div class="col col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+            <div class="col col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <h3>Margin utilities</h3>
+      <br>
+      <h6>With the move to flexbox in v4, you can use margin utilities like <span style="color:red;">.me-auto</span> to force sibling columns away from one another.</h6>
+      <br>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col col-md-4">.col-md-4</div>
+          <div class="col col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+        </div>
+        <div class="row">
+          <div class="col col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+          <div class="col col-md-3 ms-md-auto">.col-md-3 .ms-md-auto</div>
+        </div>
+        <div class="row">
+          <div class="col col-auto me-auto">.col-auto .me-auto</div>
+          <div class="col col-auto">.col-auto</div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3>Standalone column classes</h3>
+      <br>
+      <h6>The <span style="color:red;"> .col-*</span> classes can also be used outside a <span style="color:red;">.row</span>  to give an element a specific width. Whenever column classes are used as non direct children of a row, the paddings are omitted.</h6>
+      <br>
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 bg-light p-3 border">
+                .col-3: width of 25%
+              </div>
+              <div class="col-sm-9 bg-light p-3 border">
+                .col-sm-9: width of 75% above sm breakpoint
+              </div>
+        </div>
+        <br>
+        <br>
+        <h5>The classes can be used together with utilities to create responsive floated images. Make sure to wrap the content in a <span style="color: red;"> .clearfix</span> wrapper to clear the float if the text is shorter.</h5>
+        <br>
+        <br>
+        <div class="clearfix">
+            <img src="Images/smallimg.jpg" class="col-md-4 float-md-end mb-3 ms-md-3" alt="...">
+          
+            <p>
+              A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+            </p>
+          
+            <p>
+              As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+            </p>
+          
+            <p>
+              And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+            </p>
+          </div>
+      </div>
+
+</body>
+
+</html>

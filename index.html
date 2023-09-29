@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index1</title>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .row {
+            background-color: blueviolet;
+            height: auto;
+        }
+
+        .col {
+            height: 5rem;
+            color: white;
+        }
+
+        .container {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>For .Container Class</h1>
+        <h3><mark>.container</mark>, which sets a <mark>max-width</mark> at each responsive breakpoint</h3>
+        <div class="row">
+            <div class="col col-sm-10 col-md-4 col-lg-12 col-xl-5 col-xxl-1 bg-info">This is first column.</div>
+            <div class="col col-sm-2 col-md-4 col-lg-9 col-xl-4 col-xxl-1 bg-danger">This is Second column.</div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-5 col-md-7 col-lg-10 col-xl-7 col-xxl-8 bg-secondary">This is Three column.</div>
+            <div class="col col-sm-3 col-md-11 col-lg-5 col-xl-10 col-xxl-12 bg-success">This is Four column.</div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-2 col-md-8 col-lg-11 col-xl-12 col-xxl-3 bg-primary">This is Five column.</div>
+            <div class="col col-sm-12 col-md-3 col-lg-6 col-xl-7 col-xxl-10 bg-danger">This is Six column.</div>
+        </div>
+    </div>
+    <div class="container container-lg">
+        <h1>For. Responsive_Container Class</h1>
+        <h3><mark>.container-{breakpoint}</mark>, which is <mark>width: 100%</mark> until the specified breakpoint</h3>
+        <div class="row">
+            <div class="col bg-dark">First Column.</div>
+            <div class="col  bg-secondary">First Column.</div>
+        </div>
+        <div class="row">
+            <div class="col bg-info">Third Column.</div>
+            <div class="col bg-dark">Fourth Column.</div>
+        </div>
+        <div class="row">
+            <div class="col bg-warning">Fifth Column.</div>
+            <div class="col bg-secondary">Sixt Column.</div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h1>Welcome to our Website</h1>
+        <p>This is a sample paragraph inside a fluid container.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Section 1</h2>
+                <p>Content for section 1.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Section 2</h2>
+                <p>Content for section 2.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Grid System</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col" style="background-color: burlywood;">
+                Column 1
+            </div>
+            <div class="col">
+                Column 2
+            </div>
+            <div class="col" style="background-color:rgb(98, 180, 16);">
+                Column 3
+            </div>
+            <div class="row">
+                <div class="col" style="background-color: burlywood;">
+                    Column 4</div>
+                <div class="col">
+                    Column 5
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="background-color:rgb(98, 180, 16);">
+                    Column 6
+                </div>
+                <div class="col" style="background-color: burlywood;">
+                    Column 7
+                </div>
+                <div class="col">
+                    Column 8
+                </div>
+                <div class="col-4" style="background-color:rgb(98, 180, 16);">
+                    Column 9
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+<!-- text-primary
+text-success
+text-info
+text-warning
+text-danger
+text-secondary
+text-dark
+text-body
+text-light
+text-white -->
+<!-- <div class="col-4 order-3 order-xl-3 order-md-2 bg-warning"> Col-1</div>
+            <div class="col order-1 order-xl-2 order-md-3 bg-light"> Col-2</div>
+            <div class="col order-2 order-xl-1 order-md-1 bg-primary"> Col-3</div> -->
