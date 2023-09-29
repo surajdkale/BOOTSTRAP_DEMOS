@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gutters in Bootstrap</title>
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .row {
+            background-color: #FFE5E5;
+            /* margin-bottom: .5rem; */
+            /* padding: 50px 40px; */
+            height: fit-content;
+        }
+
+        .col {
+            border: 1px solid rgb(189, 186, 186);
+            text-align: center;
+            /* padding: 5px 10px; */
+            background-color: aliceblue;
+            margin-bottom: .5rem;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Gutters </h3>
+    <h5>Gutters are the padding between your columns, used to responsively space and align content in the Bootstrap grid
+        system.</h5>
+    <br>
+    <h4>Horizontal Gutters</h4>
+    <h6> <span>.gx-*</span> classes can be used to control the horizontal gutter widths. The <span> .container or
+            .container-fluid </span>parent may need to be adjusted if larger gutters are used too to avoid unwanted
+        overflow, using a matching padding utility. For example, in the following example we’ve increased the padding
+        with <span>.px-4:</span></h6>
+    <br>
+    <div class="container px-4">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h6>An alternative solution is to add a wrapper around the <span>.row</span> with the <span>.overflow-hidden</span>
+        class:</h6>
+    <br>
+    <div class="container overflow-hidden">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>Vertical Gutters</h3>
+    <br>
+    <h6> <span>.gy-*</span> classes can be used to control the vertical gutter widths. Like the horizontal gutters, the
+        vertical gutters can cause some overflow below the <span>.row</span> at the end of a page. If this occurs, you
+        add a wrapper around <span>.row</span> with the <span></span> .overflow-hidden class:</h6>
+    <br>
+    <div class="container overflow-hidden">
+        <div class="row gy-5">
+            <div class="col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>Horizontal & Vertical Gutters</h3>
+    <br>
+    <h6><span>.g-*</span> classes can be used to control the horizontal gutter widths, for the following example we use
+        a smaller gutter width, so there won’t be a need to add the <span>.overflow-hidden</span> wrapper class.</h6>
+    <br>
+    <div class="container">
+        <div class="row g-2">
+            <div class="col col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+            <div class="col col-6">
+                <div class="p-3 border bg-light">Custom column padding</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>Row Columns Gutters</h3>
+    <br>
+    <h6>Gutter classes can also be added to row columns. In the following example, we use responsive row columns and
+        responsive gutter classes.</h6>
+    <div class="container">
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>No Gutters</h3>
+    <br>
+    <h6>The gutters between columns in our predefined grid classes can be removed with <span> .g-0</span>. This removes the negative
+       <span> margins</span> from <span> .row</span> and the horizontal <span>padding</span> from all immediate children columns.</h6>
+       <br>
+       <h4>Need an edge-to-edge design?</h4><h6>Drop the parent <span>.container</span> or <span>.container-fluid</span>.</h6>
+       <br>
+       <br>
+       <div class="row row g-0">
+        <div class="col col-sm-6 col-md-8">.col-sm-6 .col-md-8</div>
+        <div class="col col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+</body>
+
+</html>
