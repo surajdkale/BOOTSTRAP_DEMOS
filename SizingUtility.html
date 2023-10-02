@@ -6,53 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sizing Utiliy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
-<style>
-    .row {
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .row {
 
-        /* margin-bottom: .5rem; */
-        /* padding: 50px 40px; */
-        height: fit-content;
-    }
+            /* margin-bottom: .5rem; */
+            /* padding: 50px 40px; */
+            height: fit-content;
+        }
 
 
-    span {
-        color: red;
-    }
-</style>
+        span {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
+            <div class="col text-black">
+                <div class="w-25 p-3 bg-success">Width 25%</div>
+                <div class="w-50 p-3 bg-info">Width 50%</div>
+                <div class="w-75 p-3 bg-primary">Width 75%</div>
+                <div class="w-100 p-3 bg-warning">Width 100%</div>
+                <div class="w-auto p-3 bg-danger">Width auto</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-black">
+                <div style="height: 100px;">
+                    <div class="h-25 d-sm-inline-block bg-info" style="width: 120px;">Height 25%</div>
+                    <div class="h-50 d-sm-inline-block bg-primary" style="width: 120px;">Height 50%</div>
+                    <div class="h-75 d-sm-inline-block bg-secondary" style="width: 120px;">Height 75%</div>
+                    <div class="h-100 d-sm-inline-block bg-danger" style="width: 120px;">Height 100%</div>
+                    <div class="h-auto d-sm-inline-block bg-dark" style="width: 120px;">Height auto</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
             <div class="col">
-                <div class="mw-25 p-3 bg-success">Width 25%</div>
-                <div class="mw-50 p-3 bg-info">Width 50%</div>
-                <div class="mw-75 p-3 bg-primary">Width 75%</div>
-                <div class="mw-100 p-3 bg-warning">Width 100%</div>
-                <div class="mw-auto p-3 bg-danger">Width auto</div>
+                <div style="width: 50%; height: 100px;">
+                    <div class="mw-100 border border-2 border-info rounded text-center bg-info-subtle"
+                        style="width: 200%;">Max-width 100%</div>
+                </div>
+                <div style="height: 100px;">
+                    <div class="mh-100 border border-2 border-info rounded text-center bg-info-subtle"
+                        style="width: 100px; height: 200px;">Max-height 100%</div>
+                </div>
+                <div class="min-vw-50 border border-2 border-primary-subtle rounded bg-primary-subtle text-center text-black ">Min-width 100vw</div>
+                <div class="min-vh-50 border border-2 border-primary-subtle rounded bg-primary-subtle text-center text-black ">Min-height 100vh</div>
+                <div class="vw-50 border border-2 border-primary-subtle rounded bg-primary-subtle text-center text-black ">Width 100vw</div>
+                <div class="vh-50 border border-2 border-primary-subtle rounded bg-primary-subtle text-center text-black ">Height 100vh</div>
             </div>
         </div>
     </div>
 </body>
 
 </html>
-text 
-spacing 
-sizing 
-vertical alginment 
-visibiltiy 
+text
+spacing
+sizing
+vertical alginment
+visibiltiy
 
 float
-flex 
+flex
 
-tommorw 
+tommorw
 =======
 Overflow
 posiition
 shadow
-object fit 
-z index 
+object fit
+z index
 3.30 to 4.15 css first 3 day file disscussion
 selectors file day 21 and day 1 2 and 3
