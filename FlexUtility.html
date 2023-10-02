@@ -1,46 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Utility</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
-<style>
-    .row {
-        height: 5rem;
-        margin-bottom: 5rem;
-    }
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .row {
 
-    .col {
-        height: 2rem;
-        color: black;
-        font-size: 20px;
-    }
-</style>
+            /* margin-bottom: .5rem; */
+            /* padding: 50px 40px; */
+            height: fit-content;
+        }
+
+
+        span {
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <div class="d-inline-flex bg-primary mb-2">Im inside flex</div>
-                <div class="d-inline-flex bg-info mb-2">Im inside flex</div>
-                <div class="d-lg-inline-flex bg-success mb-2">Im inside flex</div>
+            <h3>Enable flex behaviors</h3>
+            <h6>
+                Apply <span> display</span> utilities to create a flexbox container and transform <b>direct children
+                    elements</b> into flex
+                items. Flex containers and items are able to be modified further with additional flex properties.
+            </h6>
+            <div class="col text-white">
+                <div class="d-flex p-2  bg-danger">I'm an flexbox container!</div>
+                <div class="d-inline-flex p-2  bg-danger">I'm an inline flexbox container!</div>
+                <div class="d-sm-flex p-2  bg-black">I'm an -sm- flexbox container!</div>
+                <div class="d-sm-inline-flex p-2  bg-success">I'm an -sm- inline flexbox container!</div>
+                <div class="d-md-flex p-2  bg-info">I'm an -md- flexbox container!</div>
+                <div class="d-md-inline-flex p-2  bg-secondary">I'm an -md- inline flexbox container!</div>
+                <div class="d-lg-flex p-2  bg-primary">I'm an -lg- flexbox container!</div>
+                <div class="d-lg-inline-flex p-2  bg-warning">I'm an -lg- inline flexbox container!</div>
+                <div class="d-xl-flex p-2  bg-dark">I'm an -xl- flexbox container!</div>
+                <div class="d-xl-inline-flex p-2  bg-dark">I'm an -xl- inline flexbox container!</div>
+                <div class="d-xxl-flex p-2  bg-dark">I'm an -xxl- flexbox container!</div>
+                <div class="d-xxl-inline-flex p-2  bg-dark">I'm an -xxl- inline flexbox container!</div>
             </div>
         </div>
+    </div>
+    <br>
+    <h3>Direction </h3>
+    <h6>Set the direction of flex items in a flex container utilities. In most cases you can omit
+        the horizontal class here as the broweser default is <span>row</span>.However, you may
+        encounter situations where you needed to explicitely set this value (like responsive layouts.)
+        <br>
+        Use <span>.Flex-row</span> to set a horizontal dirction (The browser default), or
+        <span>.Flex-row-reverse</span> to start the horizontal dirction from the opposite side.
+    </h6>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                
-                <div class="d-flex flex-column align-items-end mb-2">
-                    <p class="bg-success p-2 align-self-center">P1</p>
-                    <p class="bg-success p-2 align-self-end">P2</p>
-                    <p class="bg-success p-2 align-self-baseline">P2</p>
-                    <p class="bg-success p-2 align-self-start">P3</p>
+            <div class="col text-white">
+                <div class="d-flex flex-row mb-3">
+                    <div class="p-2 bg-danger">Flex item 1</div>
+                    <div class="p-2  bg-success">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                    <div class="p-2 bg-danger">Flex item 1</div>
+                    <div class="p-2 bg-dark">Flex item 2</div>
+                    <div class="p-2 bg-info">Flex item 3</div>
                 </div>
             </div>
+        </div>
+    </div>
+    <br>
+    <h6>Use <span>.flex-column</span> to set a vertical direction, or <span>.flex-column-reverse</span> to start the
+        vertical direction from the opposite side.</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex flex-column mb-3">
+                    <div class="p-2 bg-danger">Flex item 1</div>
+                    <div class="p-2 bg-success">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                </div>
+                <div class="d-flex flex-column-reverse">
+                    <div class="p-2 bg-success">Flex item 1</div>
+                    <div class="p-2 bg-danger">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Justify Content </h1>
+    <h6>Use <span>justify-content</span> utilities on flexbox containers to change the alignment of flex items on the
+        main axis (the
+        x-axis to start, y-axis if <span>flex-direction: column</span> ). Choose from(browser default), <span> end,
+            center, between,
+            around, or evenly.</span> </h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex justify-content-start bg-info">d-flex justify-content-start.</div>
+                <div class="d-flex justify-content-end bg-primary">d-flex justify-content-end</div>
+                <div class="d-flex justify-content-center bg-secondary">d-flex justify-content-center</div>
+                <div class="d-flex justify-content-between bg-success">d-flex justify-content-between</div>
+                <div class="d-flex justify-content-around bg-dark">d-flex justify-content-around</div>
+                <div class="d-flex justify-content-evenly bg-danger">d-flex justify-content-evenly</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Align Items</h3>
+    <h6>Use <span>align-items</span> utilities on flexbox containers to change the alignment of flex items on the cross
+        axis (the
+        y-axis to start, x-axis if <span>flex-direction: column</span>). Choose from <span> start, end, center,
+            baseline, or stretch</span>
+        (browser default).</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex p-2 align-items-start bg-danger">d-flex align-items-start</div>
+                <div class="d-flex p-2 align-items-end bg-success">d-flex align-items-end</div>
+                <div class="d-flex p-2 align-items-center bg-info">d-flex align-items-center</div>
+                <div class="d-flex p-2 align-items-baseline bg-secondary">d-flex align-items-baseline</div>
+                <div class="d-flex p-2 align-items-stretch bg-dark">d-flex align-items-stretch</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Align self</h3>
+    <h6>Use <span>align-self</span> utilities on flexbox items to individually change their alignment on the cross axis
+        (the y-axis
+        to start, x-axis if <span>flex-direction: column</span>). Choose from the same options as <span>align-items:
+            start, end, center,
+            baseline, or stretch </span>(browser default).</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex p-5 align-self-start bg-danger border-2 border-primary ">Aligned flex item</div>
+                <div class="d-flex p-5 align-self-end bg-info">Aligned flex item</div>
+                <div class="d-flex p-5 align-self-center bg-secondary">Aligned flex item</div>
+                <div class="d-flex p-5 align-self-baseline bg-success">Aligned flex item</div>
+                <div class="d-flex p-5 align-self-stretch bg-dark">Aligned flex item</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Fill</h3>
+    <h6>Use the <span>.flex-fill</span> class on a series of sibling elements to force them into widths equal to their
+        content (or
+        equal widths if their content does not surpass their border-boxes) while taking up all available horizontal
+        space.</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex">
+                    <div class="p-2 flex-fill bg-danger">Flex item with a lot of content</div>
+                    <div class="p-2 flex-fill bg-secondary">Flex item</div>
+                    <div class="p-2 flex-fill bg-success">Flex item</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>Grow and shrink</h3>
+    <h6>Use <span>.flex-grow-*</span> utilities to toggle a flex item’s ability to grow to fill available space. In the
+        example
+        below, the <span>.flex-grow-1</span> elements uses all available space it can, while allowing the remaining two
+        flex items
+        their necessary space.</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex">
+                    <div class="p-2 flex-grow-1 bg-danger">Flex item</div>
+                    <div class="p-2 bg-primary">Flex item</div>
+                    <div class="p-2 bg-info">Third flex item</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
 
+    <h6>Use <span>.flex-shrink-*</span> utilities to toggle a flex item’s ability to shrink if necessary. In the example
+        below, the
+        second flex item with <span>.flex-shrink-1</span> is forced to wrap its contents to a new line, “shrinking” to
+        allow more
+        space for the previous flex item with <span>.w-100.</span></h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex">
+                    <div class="p-2 w-100 bg-warning">Flex item</div>
+                    <div class="p-2 flex-shrink-1 bg-success">Flex item</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Auto margins </h3>
+    <h6>
+        Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three
+        examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right
+        (<span>.me-auto</span>), and pushing two items to the left (<span>.ms-auto</span>).
+    </h6><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex mb-3">
+                    <div class="p-2 bg-warning">Flex item</div>
+                    <div class="p-2 bg-info">Flex item</div>
+                    <div class="p-2 bg-success">Flex item</div>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <div class="me-auto p-2 bg-info">Flex item</div>
+                    <div class="p-2 bg-success">Flex item</div>
+                    <div class="p-2 bg-warning">Flex item</div>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <div class="p-2 bg-success">Flex item</div>
+                    <div class="p-2 bg-warning">Flex item</div>
+                    <div class="ms-auto p-2 bg-info">Flex item</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <h3>With align-items </h3>
+    <h6>Vertically move one flex item to the top or bottom of a container by mixing <span>align-items, flex-direction: column,
+        and margin-top: auto or margin-bottom: auto.</span> </h6>
+        <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-white">
+                <div class="d-flex align-items-start flex-column mb-3" style="height: 200px;">
+                    <div class="mb-auto p-2 bg-primary">Flex item</div>
+                    <div class="p-2 bg-secondary">Flex item</div>
+                    <div class="p-2 bg-danger">Flex item</div>
+                  </div>
+                  
+                  <div class="d-flex align-items-end flex-column mb-3" style="height: 200px;">
+                    <div class="p-2 bg-warning">Flex item</div>
+                    <div class="p-2 bg-info">Flex item</div>
+                    <div class="mt-auto p-2 bg-dark">Flex item</div>
+                  </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
