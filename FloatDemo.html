@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    .row {
+
+        /* margin-bottom: .5rem; */
+        /* padding: 50px 40px; */
+        height: fit-content;
+    }
+
+
+    span {
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="bg-success float-end float-lg-start text-white user-select-all bm-2 p-2">All Content get selected after click by user on text</div>
+                <div class="bg-info float-start float-lg-start text-white user-select-auto bm-2 p-2">Default Selection Div 2</div>
+                <div class="bg-danger float-none float-lg-start text-white   user-select-none bm-2 p-2">You can't select this Content</div>
+                <p><a href="https://getbootstrap.com/docs/4.0/utilities/colors/" class="pe-none" tabindex="-1" aria-disabled="true">This link </a>Cannot be accessed.</p>
+                <p><a href="https://getbootstrap.com/docs/4.0/utilities/colors/" class="pe-auto">This link </a>Cannot be accessed.</p>
+                <p><a href="https://getbootstrap.com/docs/4.0/utilities/colors/" class="pe-none">This link </a>Cannot be accessed.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
