@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utility</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .row {
+
+            /* margin-bottom: .5rem; */
+            /* padding: 50px 40px; */
+            height: fit-content;
+        }
+
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Alignment</h1>
+    <h5>Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive
+        classes are available that use the same viewport width breakpoints as the grid system.</h5>
+    <div class="conatainer-fluid">
+        <div class="row border border-1 border-success">
+            <div class="col">
+                <p class="text-start">Start aligned text on all viewport sizes.</p>
+                <p class="text-center">Center aligned text on all viewport sizes.</p>
+                <p class="text-end">End aligned text on all viewport sizes.</p>
+                <p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
+                <p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
+                <p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
+                <p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
+                <p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
+            </div>
+        </div>
+    </div>
+<br>
+<h3>Text wrapping and overflow</h3>
+<h6>Wrap text with a .text-wrap class.</h6>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col border border-1 border-success">
+            <div class="badge bg-primary text-wrap" style="width: 6rem;">
+                This text should wrap.
+              </div>
+        </div>
+    </div>
+    <br>
+    <h6>Prevent text from wrapping with a .text-nowrap class.</h6>
+    <div class="row">
+        <div class="col border border-1 border-success">
+            <div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
+                This text should overflow the parent.
+              </div>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Word break</h3>
+<h6>Prevent long strings of text from breaking your components’ layout by using .text-break to set word-wrap: break-word and word-break: break-word. We use word-wrap instead of the more common overflow-wrap for wider browser support, and add the deprecated word-break: break-word to avoid issues with flex containers.</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col border border-1 border-success">
+<p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Text transform </h3>
+    <h6>Transform text in components with text capitalization classes.</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col border border-1 border-success">
+                <p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">CapiTaliZed text.</p>
+<br>
+<h6>Note how .text-capitalize only changes the first letter of each word, leaving the case of any other letters unaffected.</h6>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Font size</h3>
+    <h6>Quickly change the font-size of text. While our heading classes (e.g., .h1–.h6) apply font-size, font-weight, and line-height, these utilities only apply font-size. Sizing for these utilities matches HTML’s heading elements, so as the number increases, their size decreases.</h6>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col border border-1 border-success">
+                <p class="fs-1">.fs-1 text</p>
+<p class="fs-2">.fs-2 text</p>
+<p class="fs-3">.fs-3 text</p>
+<p class="fs-4">.fs-4 text</p>
+<p class="fs-5">.fs-5 text</p>
+<p class="fs-6">.fs-6 text</p>
+            </div>
+        </div>
+        <h3>Font weight and italics </h3>
+        <h6>Quickly change the font-weight or font-style of text with these utilities. font-style utilities are abbreviated as .fst-* and font-weight utilities are abbreviated as .fw-*.</h6>
+        <br>
+        <div class="col border border-1 border-success">
+            <p class="fw-bold">Bold text.</p>
+<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="fw-semibold">Semibold weight text.</p>
+<p class="fw-medium">Medium weight text.</p>
+<p class="fw-normal">Normal weight text.</p>
+<p class="fw-light">Light weight text.</p>
+<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="fst-italic">Italic text.</p>
+<p class="fst-normal">Text with normal font style</p>
+        </div>
+        <br>
+        <br>
+        <h3>Line height </h3>
+        <h6>Change the line height with .lh-* utilities.</h6>
+        <div class="col border border-1 border-success">
+            <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+        </div>
+        <br>
+        <br>
+        <h3>Monospace</h3>
+        <h6>Change a selection to our monospace font stack with .font-monospace.</h6>
+        <div class="col border border-1 border-success">
+            <p class="font-monospace">This is in monospace</p>
+        </div>
+        <br>
+        <h3>Reset color</h3>
+        <h6>Reset a text or link’s color with .text-reset, so that it inherits the color from its parent.</h6>
+        <div class="col border border-1 border-success">
+            <p class="text-body-secondary">
+                Secondary body text with a <a href="#" class="text-reset">reset link</a>.
+              </p>
+        </div>
+<br>
+        <h3>Text Decoration</h3>
+        <h6>Decoreate text in compponenets with text decoration classes.</h6>
+        <div class="col border border-1 border-success">
+            <p class="text-decoration-underline">This text has a line underneath it.</p>
+<p class="text-decoration-line-through">This text has a line going through it.</p>
+<a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -30,52 +30,93 @@
 
     <br>
     <h3>Margin and padding</h3>
-    <h6>Assign responsive-friendly <code>margin</code> or <code>padding</code> values to an element or a subset of its sides with shorthand
+    <h6>Assign responsive-friendly <code>margin</code> or <code>padding</code> values to an element or a subset of its
+        sides with shorthand
         classes. Includes support for individual properties, all properties, and vertical and horizontal properties.
         Classes are built from a default Sass map ranging from <code>.25rem</code> to <code>3rem.</code></h6>
-        <p>Where property is one of:</p>
-        
-        <li>m - for classes that set margin</li>
-        <li>p - for classes that set padding</li>
-       
-       <p>Where sides is one of:</p> 
-        <li>t - for classes that set margin-top or padding-top</li>
-        <li>b - for classes that set margin-bottom or padding-bottom</li>
-        <li>s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL</li>
-        <li>e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL</li>
-        <li>x - for classes that set both *-left and *-right</li>
-        <li>y - for classes that set both *-top and *-bottom</li>
-        <li>blank - for classes that set a margin or padding on all 4 sides of the element</li>
-        
-        <p><em>Where size is one of:</em></p>
-        
-        <li>0 - for classes that eliminate the margin or padding by setting it to 0</li>
-        <li>1 - (by default) for classes that set the margin or padding to $spacer * .25</li>
-        <li>2 - (by default) for classes that set the margin or padding to $spacer * .5</li>
-        <li>3 - (by default) for classes that set the margin or padding to $spacer</li>
-        <li>4 - (by default) for classes that set the margin or padding to $spacer * 1.5</li>
-        <li>5 - (by default) for classes that set the margin or padding to $spacer * 3</li>
-        <li>auto - for classes that set the margin to auto</li>
-        <br>
-        <p>(You can add more sizes by adding entries to the $spacers Sass map variable.)</p>
-        <br>
-        
+    <p>Where property is one of:</p>
+
+    <li>m - for classes that set margin</li>
+    <li>p - for classes that set padding</li>
+
+    <p>Where sides is one of:</p>
+    <li>t - for classes that set margin-top or padding-top</li>
+    <li>b - for classes that set margin-bottom or padding-bottom</li>
+    <li>s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL</li>
+    <li>e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL</li>
+    <li>x - for classes that set both *-left and *-right</li>
+    <li>y - for classes that set both *-top and *-bottom</li>
+    <li>blank - for classes that set a margin or padding on all 4 sides of the element</li>
+
+    <p><em>Where size is one of:</em></p>
+
+    <li>0 - for classes that eliminate the margin or padding by setting it to 0</li>
+    <li>1 - (by default) for classes that set the margin or padding to $spacer * .25</li>
+    <li>2 - (by default) for classes that set the margin or padding to $spacer * .5</li>
+    <li>3 - (by default) for classes that set the margin or padding to $spacer</li>
+    <li>4 - (by default) for classes that set the margin or padding to $spacer * 1.5</li>
+    <li>5 - (by default) for classes that set the margin or padding to $spacer * 3</li>
+    <li>auto - for classes that set the margin to auto</li>
+    <br>
+    <p>(You can add more sizes by adding entries to the $spacers Sass map variable.)</p>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h3>Horizontal centering</h3>
+                <h6>Additionally, Bootstrap also includes an .mx-auto class for horizontally centering fixed-width block
+                    level content—that is, content that has display: block and a width set—by setting the horizontal
+                    margins to auto.</h6>
+                <div class="mx-auto p-2 border border-2 border-success bg-success-subtle rounded" style="width: 200px;">
+                    Centered element
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Gap</h3>
+    <h6>When using display: grid or display: flex, you can make use of gap utilities on the parent element. This can
+        save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are
+        responsive by default, and are generated via our utilities API, based on the $spacers Sass map.</h6>
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <h3>Horizontal centering</h3>
-                    <h6>Additionally, Bootstrap also includes an .mx-auto class for horizontally centering fixed-width block level content—that is, content that has display: block and a width set—by setting the horizontal margins to auto.</h6>
-                    <div class="mx-auto p-2 border border-2 border-success bg-success-subtle rounded" style="width: 200px;">
-                        Centered element
+                    <div class="grid gap-5">
+                        <div class="p-2  border-1 border-danger bg-danger-subtle text-center ">Grid item 1</div>
+                        <div class="p-2  border-1 border-danger bg-danger-subtle text-center ">Grid item 2</div>
+                        <div class="p-2  border-1 border-danger bg-danger-subtle text-center ">Grid item 3</div>
+                        <div class="p-2  border-1 border-danger bg-danger-subtle text-center ">Grid item 4</div>
                       </div>
                 </div>
             </div>
         </div>
-       
-        
-        
-        
-        
+
+        <br>
+        <h3>Row Gap</h3>
+        <h6>row-gap sets the vertical space between children items in the specified container.</h6>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="grid gap-0 row-gap-3">
+                        <div class="p-2 g-col-6">Grid item 1</div>
+                        <div class="p-2 g-col-6">Grid item 2</div>
+                        <div class="p-2 g-col-6">Grid item 3</div>
+                        <div class="p-2 g-col-6">Grid item 4</div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <h3>Column-gap</h3>
+        <h6>column-gap sets the horizontal space between children items in the specified container.</h6>
+        <div class="grid gap-0 column-gap-3">
+            <div class="p-2 g-col-6">Grid item 1</div>
+            <div class="p-2 g-col-6">Grid item 2</div>
+            <div class="p-2 g-col-6">Grid item 3</div>
+            <div class="p-2 g-col-6">Grid item 4</div>
+          </div>
+
 </body>
 
 </html>
