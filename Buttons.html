@@ -22,9 +22,189 @@
 </head>
 
 <body>
+    <h1>Buttons</h1>
+    <br>
     <div class="container-fluid">
         <div class="row">
+            <div class="col">
+                <h3>base Class</h3>
+                <h6>Bootstrap has a base .btn class that sets up basic styles such as padding and content alignment. By
+                    default, .btn controls have a transparent border and background color, and lack any explicit focus
+                    and hover styles.</h6>
+                <br>
+                <hr>
+                <button type="button" class="btn">Basic Button</button>
+                <div
+                    class="p-1 bg-warning-subtle w-50 h-10 text-warning border border-5 border-start  border-warning border-top-0 border-end-0 border-bottom-0 ">
+                    If you are using the <code>.btn</code> class on its own, remember to at least define some explicit
+                    <code>:focus</code> and /or <code>:focus-visible</code> styles.
+                </div>
+                <br>
+                <h3>Variants </h3>
+                <h6>Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras
+                    thrown in for more control.</h6>
+                <br>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-link">Link</button>
+                <br><br>
+                <h3>Outline buttons </h3>
+                <h6>In need of a button, but not the hefty background colors they bring? Replace the default modifier
+                    classes with the <code>.btn-outline-*</code> ones to remove all background images and colors on any
+                    button.</h6>
+                <br>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-light">Light</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+                <br>
+                <br>
+                <h3>Sizes </h3>
+                <h6>Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional
+                    sizes.</h6>
+                <br>
+                <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+                <br><br>
+                <h4>Smaller Butttons</h4>
+                <br>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+                <br>
+                <br>
+                <h6>You can even roll your own custom sizing with CSS variables:</h6>
+                <br>
+                <button type="button" class="btn btn-primary"
+                    style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                    Custom button
+                </button>
+                <br><br>
+                <h3>Disabled state</h3>
+                <br><br>
+                <button type="button" class="btn btn-primary" disabled>Primary button</button>
+                <button type="button" class="btn btn-secondary" disabled>Button</button>
+                <button type="button" class="btn btn-outline-primary" disabled>Primary button</button>
+                <button type="button" class="btn btn-outline-secondary" disabled>Button</button>
+                <br><br>
+                <h3>Block buttons</h3>
+                <h6>Create responsive stacks of full-width, “block buttons” like those in Bootstrap 4 with a mix of our
+                    display and gap utilities. By using utilities instead of button-specific classes, we have much
+                    greater control over spacing, alignment, and responsive behaviors.</h6>
+                <br>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                </div>
+                <br><br>
+                <h6>Here we create a responsive variation, starting with vertically stacked buttons until the md
+                    breakpoint, where<code>.d-md-block</code> replaces the<code>.d-grid</code> class, thus nullifying the gap-2 utility. Resize
+                    your browser to see them change.</h6>
+                <br>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                </div>
+                <br><br>
+                <h6>You can adjust the width of your block buttons with grid column width classes. For example, for a
+                    half-width “block button”, use <code>.col-6</code>. Center it horizontally with <code>.mx-auto</code>, too.</h6>
+                <br>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary" type="button">Button</button>
+                    <button class="btn btn-primary" type="button">Button</button>
+                </div>
+                <br><br><br>
+                <h3>Toggle States</h3>
+                <br>
+                <h6>Add data-bs-toggle="button" to toggle a button’s active state. If you’re pre-toggling a button, you
+                    must manually add the <code>.active</code> class and aria-pressed="true" to ensure that it is conveyed
+                    appropriately to assistive technologies.</h6>
+                <br>
+                <p class="d-inline-flex gap-1">
+                    <button type="button" class="btn" data-bs-toggle="button">Toggle button</button>
+                    <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Active toggle
+                        button</button>
+                    <button type="button" class="btn" disabled data-bs-toggle="button">Disabled toggle button</button>
+                </p>
+                <p class="d-inline-flex gap-1">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+                    <button type="button" class="btn btn-primary active" data-bs-toggle="button"
+                        aria-pressed="true">Active toggle button</button>
+                    <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle
+                        button</button>
+                </p>
+
+            </div>
         </div>
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn btn-primary">1</button>
+            <button type="button" class="btn btn-primary">2</button>
+          
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              </ul>
+            </div>
+          </div>
+          <br><br><br>
+          <h2>Vertical Buttons</h2>
+          <div class="btn-group  mb-4" role="group" aria-label="Vertical button group">
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+            <button type="button" class="btn btn-primary">Button</button>
+              
+                <div class="btn-group dropstart" role="group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group dropend" role="group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropdown" role="group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup" role="group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                    </ul>
+                  </div>
+        
+          </div>
     </div>
 </body>
 
