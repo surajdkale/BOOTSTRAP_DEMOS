@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroupList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    .row {
+        /* margin-bottom: .5rem; */
+        /* padding: 50px 40px; */
+        height: fit-content;
+    }
+
+    span {
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <ul class="list-group mb-3">
+                    <li class="list-group-item active">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">A fourth item</li>
+                    <li class="list-group-item">And a fifth one</li>
+                  </ul>
+                  <!-- for active items  -->
+                  <ul class="list-group mb-3">
+                    <li class="list-group-item active" aria-current="true">An active item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">A fourth item</li>
+                    <li class="list-group-item">And a fifth one</li>
+                  </ul>
+                  <!-- for disabled items  -->
+                  <ul class="list-group mb-3">
+                    <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">A fourth item</li>
+                    <li class="list-group-item">And a fifth one</li>
+                  </ul>
+                  <!-- for link and buttons  -->
+                  <div class="list-group mb-3">
+                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                      The current link item
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                    <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                    <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                    <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+                  </div>
+                  <!-- for flush  -->
+                  <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">A fourth item</li>
+                    <li class="list-group-item">And a fifth one</li>
+                  </ul>
+                  <!-- for numbered Items  -->
+                  <ol class="list-group list-group-numbered mb-3">
+                    <li class="list-group-item">A list item</li>
+                    <li class="list-group-item">A list item</li>
+                    <li class="list-group-item">A list item</li>
+                  </ol>
+                  <!-- for custome content as  well  -->
+                  <ol class="list-group list-group-numbered mb-3">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Subheading</div>
+                        Content for list item
+                      </div>
+                      <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Subheading</div>
+                        Content for list item
+                      </div>
+                      <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Subheading</div>
+                        Content for list item
+                      </div>
+                      <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+                  </ol>
+                  <!-- listflush class  demo end here  -->
+                  <ol class="list-group  list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-primary rounded-pill">14</span>
+                      </li>
+                  </ol>
+                  <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-success rounded-pill">14</span>
+                      </li>
+                  </ol>
+                  <ol class="list-group mb-5 list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Subheading</div>
+                          Content for list item
+                        </div>
+                        <span class="badge bg-secondary rounded-pill">14</span>
+                      </li>
+                  </ol>
+                  <!-- ol ends here  -->
+                  <ul class="list-group  list-group-horizontal">
+                    <li class="list-group-item"> First Item</li>
+                    <li class="list-group-item">Second Item</li>
+                    <li class="list-group-item">Third Item</li>
+                    <li class="list-group-item">Fourth Item</li>
+                  </ul>
+                  <ul class="list-group mb-5 list-group-horizontal">
+                    <li class="list-group-item"> First Item</li>
+                    <li class="list-group-item">Second Item</li>
+                    <li class="list-group-item">Third Item</li>
+                    <li class="list-group-item">Fourth Item</li>
+                  </ul>
+                  <!-- custom content demo starts here  -->
+                  <div class="list-group">
+                      <a href="https://" class="list-group-item list-group-item-action ">
+                         <div class="d-flex w-100 justify-content-between">
+                            <h3>Heading three</h3>
+                            <small>content goes here</small>
+                         </div>
+                    </a>
+                
+                </div>
+                <!-- custom content demo Ends here  -->
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
